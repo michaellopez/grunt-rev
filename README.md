@@ -1,6 +1,9 @@
-# grunt-rev [![Build Status](https://travis-ci.org/cbas/grunt-rev.png)](https://travis-ci.org/cbas/grunt-rev)
+# grunt-rev
 
-> Static file asset revisioning through content hashing
+[![Build Status](https://travis-ci.org/cbas/grunt-rev.png)](https://travis-ci.org/cbas/grunt-rev)
+[![Project Status: Unsupported - The project has reached a stable, usable state but the author(s) have ceased all work on it. A new maintainer may be desired.](http://www.repostatus.org/badges/latest/unsupported.svg)](http://www.repostatus.org/#unsupported)
+
+Static file asset revisioning through content hashing
 
 ## Getting Started
 _If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
@@ -34,6 +37,7 @@ In your project's Gruntfile, add a section named `rev` to the data object passed
 grunt.initConfig({
   rev: {
     options: {
+      encoding: 'utf8',
       algorithm: 'md5',
       length: 8
     },
@@ -50,6 +54,12 @@ grunt.initConfig({
 ```
 
 ### Options
+
+#### options.encoding
+Type: `String`
+Default value: `'utf8'`
+
+The encoding of the file contents.
 
 #### options.algorithm
 Type: `String`
